@@ -166,3 +166,20 @@ knitr::opts_chunk$set(
 #   y[2:t],optimal_alphas[[1]],optimal_alphas[[2]],x,"gaussian",2)
 #   head(tv_index)
 
+## ----TV sentiment index all coefs example--------------------------------
+#   set.seed(1)
+#   data("stock_data")
+#   data("news_data")
+#   y=as.matrix(stock_data[,2])
+#   w=as.matrix(stock_data[,3])
+#   data("news_data")
+#   X=news_data[,2:ncol(news_data)]
+#   x=as.matrix(X)
+#   grid_alphas=0.15
+#   cont_folds=TRUE
+#   t=length(y)
+#   optimal_alphas=optimal_alphas(x=x[1:(t-1),],
+#                                 y=y[2:t],grid_alphas=grid_alphas,cont_folds=TRUE,family="gaussian")
+#   tv_idx=tv_sentiment_index_all_coefs(x=x[1:(t-1),],y=y[2:t],alpha = optimal_alphas[1],lambda = optimal_alphas[2],newx=x,
+#                                    scaled = TRUE,k_mov_avg = 4,type_mov_avg = "s")
+

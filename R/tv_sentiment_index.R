@@ -5,7 +5,7 @@
 #' @param y the response variable.
 #' @param alpha the alpha required in glmnet.
 #' @param lambda the lambda required in glmnet.
-#' @param newx Matrix  that selection will applied. Useful for time series, when we need the observation at time t.
+#' @param newx Matrix  that selection will be applied. Useful for time series, when we need the observation at time t.
 #' @param family the glmnet family.
 #' @param k the highest positive and negative coefficients to be used.
 #'
@@ -26,6 +26,7 @@
 #'
 #'
 #' @examples
+#' suppressWarnings(RNGversion("3.5.0"))
 #' set.seed(1)
 #' data("stock_data")
 #' data("news_data")
@@ -34,7 +35,7 @@
 #' data("news_data")
 #' X=news_data[,2:ncol(news_data)]
 #' x=as.matrix(X)
-#' grid_alphas=0.25
+#' grid_alphas=0.05
 #' cont_folds=TRUE
 #' t=length(y)
 #' optimal_alphas=optimal_alphas(x[1:(t-1),],w[1:(t-1),],
