@@ -21,7 +21,7 @@ get_collocations(corpus_dates, path_name, ntrms, ngrams_number, min_freq,
 \item{language}{the texts language. Default is english.}
 }
 \value{
-a list containing  a matrix with the all collocations couting and another with a tf-idf filtered collocations counting according to the ntrms.
+a list containing  a sparse matrix with the all collocations couting and another with a tf-idf filtered collocations counting according to the ntrms.
 }
 \description{
 get_collocations function
@@ -36,9 +36,10 @@ c("m1","m2","m3","m4","m5","m6","m7","m8","m9","m10","m11","m12"))
 z_coll=get_collocations(corpus_dates=qt[1:23],path_name=path_name,
 ntrms=500,ngrams_number=3,min_freq=10)
 }
+\donttest{
 path_name=system.file("news",package="TextForecast")
 days=c("2019-30-01","2019-31-01")
 z_coll=get_collocations(corpus_dates=days[1],path_name=path_name,
 ntrms=500,ngrams_number=3,min_freq=1)
-
+}
 }

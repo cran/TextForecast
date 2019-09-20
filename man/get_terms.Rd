@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_terms.R
 \name{get_terms}
 \alias{get_terms}
-\title{Title}
+\title{get_terms function}
 \usage{
 get_terms(corpus_dates, ntrms_words, st, path.name, ntrms_collocation,
   ngrams_number, min_freq, language)
@@ -25,10 +25,10 @@ get_terms(corpus_dates, ntrms_words, st, path.name, ntrms_collocation,
 \item{language}{the texts language. Default is english.}
 }
 \value{
-a list containing  a matrix with the all collocations and words couting and another with a td-idf filtered collocations and words counting according to the ntrms.
+a list containing  a sparse matrix with the all collocations and words couting and another with a tf-idf filtered collocations and words counting according to the ntrms.
 }
 \description{
-Title
+get_terms function
 }
 \examples{
 \donttest{
@@ -40,9 +40,10 @@ c("m1","m2","m3","m4","m5","m6","m7","m8","m9","m10","m11","m12"))
 z_terms=get_terms(corpus_dates=qt[1:23],path.name=path_name,
 ntrms_words=500,ngrams_number=3,st=0,ntrms_collocation=500,min_freq=10)
 }
+\donttest{
 path_name=system.file("news",package="TextForecast")
 days=c("2019-30-01","2019-31-01")
 z_terms=get_terms(corpus_dates=days[1],path.name=path_name,
 ntrms_words=500,ngrams_number=3,st=0,ntrms_collocation=500,min_freq=1)
-
+}
 }

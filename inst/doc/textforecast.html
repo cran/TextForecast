@@ -7,11 +7,12 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="date" content="2019-03-06" />
+<meta name="date" content="2019-09-20" />
 
 <title>TextForecast R package documentation</title>
 
@@ -95,7 +96,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
       var style = rule.style.cssText;
       // check if color or background-color is set
-      if (rule.style.color === '' || rule.style.backgroundColor === '') continue;
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
       // replace div.sourceCode by a pre.sourceCode rule
       sheets[i].deleteRule(j);
       sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
@@ -290,6 +291,9 @@ code > span.al { color: #ff0000; font-weight: bold; }
 code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61717; background-color: #e3d2d2; } 
 </style>
 
+
+
+
 </head>
 
 <body>
@@ -298,15 +302,15 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 
 
 <h1 class="title toc-ignore">TextForecast R package documentation</h1>
-<h4 class="author"><em>Luiz Renato Lima</em></h4>
+<h4 class="author">Luiz Renato Lima</h4>
 <address class="author_afil">
 Department of Economics, University of Tennessee, Knoxville, United States and Department of Economics, Federal University of Paraiba, Brazil.<br><a class="author_email" href="mailto:#"><a href="mailto:llima@utk.edu" class="email">llima@utk.edu</a></a>
 </address>
-<h4 class="author"><em>Lucas Godeiro</em></h4>
+<h4 class="author">Lucas Godeiro</h4>
 <address class="author_afil">
 Department of Applied Social Sciences, Federal Rural University of the Semi-arid Region – UFERSA, Brazil.<br><a class="author_email" href="mailto:#"><a href="mailto:lucasgodeiro@ufersa.edu.br" class="email">lucasgodeiro@ufersa.edu.br</a></a>
 </address>
-<h4 class="date"><em>2019-03-06</em></h4>
+<h4 class="date">2019-09-20</h4>
 
 
 <div id="TOC">
@@ -808,6 +812,9 @@ Department of Applied Social Sciences, Federal Rural University of the Semi-arid
 </div>
 </div>
 
+
+
+<!-- code folding -->
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

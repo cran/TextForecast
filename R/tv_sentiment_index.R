@@ -13,7 +13,6 @@
 #' @import ggplot2
 #' @import tidytext
 #' @import forcats
-#' @import tidytext
 #' @importFrom dplyr tibble
 #' @importFrom dplyr filter
 #' @importFrom dplyr group_by
