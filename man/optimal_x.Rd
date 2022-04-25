@@ -4,11 +4,13 @@
 \name{optimal_x}
 \alias{optimal_x}
 \title{Optimal x}
-\format{A matrix with the most predictive terms.
+\format{
+A matrix with the most predictive terms.
 
 \describe{
 \item{x}{The matrix with 4 components.}
-}}
+}
+}
 \usage{
 optimal_x
 }

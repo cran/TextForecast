@@ -4,11 +4,13 @@
 \name{optimal_factors}
 \alias{optimal_factors}
 \title{Optimal Factors}
-\format{A vector with 1 component.
+\format{
+A vector with 1 component.
 
 \describe{
 \item{optimal fators x}{The vector of factor.}
-}}
+}
+}
 \usage{
 optimal_factors
 }

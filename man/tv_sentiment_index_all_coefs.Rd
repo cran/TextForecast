@@ -4,8 +4,18 @@
 \alias{tv_sentiment_index_all_coefs}
 \title{TV sentiment index using all positive and negative coefficients.}
 \usage{
-tv_sentiment_index_all_coefs(x, w, y, alpha, lambda, newx, family, scaled,
-  k_mov_avg, type_mov_avg)
+tv_sentiment_index_all_coefs(
+  x,
+  w,
+  y,
+  alpha,
+  lambda,
+  newx,
+  family,
+  scaled,
+  k_mov_avg,
+  type_mov_avg
+)
 }
 \arguments{
 \item{x}{A matrix of variables to be selected by shrinkrage methods.}

@@ -1,10 +1,10 @@
-## ----setup, include = FALSE----------------------------------------------
+## ----setup, include = FALSE---------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>" , warning=FALSE, eval = FALSE
 )
 
-## ----get words example---------------------------------------------------
+## ----get words example--------------------------------------------------------
 #  ## Example from function get_words.
 #  library(TextForecast)
 #  st_year=2017
@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 #  zz=z_wrd[[2]]
 #  head(zz)
 
-## ----get collocations example--------------------------------------------
+## ----get collocations example-------------------------------------------------
 #  library(TextForecast)
 #  st_year=2017
 #  end_year=2018
@@ -30,7 +30,7 @@ knitr::opts_chunk$set(
 #  knitr::kable(head(zz, 23))
 #  
 
-## ----get terms example---------------------------------------------------
+## ----get terms example--------------------------------------------------------
 #  library(TextForecast)
 #  st_year=2017
 #  end_year=2018
@@ -43,14 +43,14 @@ knitr::opts_chunk$set(
 #  #head(zz,23)
 #  knitr::kable(head(zz, 23))
 
-## ----tf-idf example------------------------------------------------------
+## ----tf-idf example-----------------------------------------------------------
 #  library(TextForecast)
 #  data("news_data")
 #   X=as.matrix(news_data[,2:ncol(news_data)])
 #    tf_idf=tf_idf(X)
 #    head(tf_idf[[1]])
 
-## ----optimal alphas example----------------------------------------------
+## ----optimal alphas example---------------------------------------------------
 #  library(TextForecast)
 #   set.seed(1)
 #   data("stock_data")
@@ -66,7 +66,7 @@ knitr::opts_chunk$set(
 #   optimal_alphas=optimal_alphas(x[1:(t-1),],w[1:(t-1),],y[2:t],grid_alphas,TRUE,"gaussian")
 #   print(optimal_alphas)
 
-## ----tv dictionary example-----------------------------------------------
+## ----tv dictionary example----------------------------------------------------
 #   library(TextForecast)
 #   set.seed(1)
 #   data("stock_data")
@@ -84,13 +84,13 @@ knitr::opts_chunk$set(
 #   optimal_alphas1=optimal_alphas(x=x[1:(t-1),],y=y[2:t],grid_alphas=grid_alphas,cont_folds=TRUE,family="gaussian")
 #   x_star1=tv_dictionary(x=x[1:(t-1),],y=y[2:t],alpha=optimal_alphas1[1],lambda=optimal_alphas1[2],newx=x,family="gaussian")
 
-## ----optimal factor example----------------------------------------------
+## ----optimal factor example---------------------------------------------------
 #  library(TextForecast)
 #  data("optimal_x")
 #  optimal_factor <- TextForecast::optimal_factors(optimal_x,8)
 #  head(optimal_factor[[1]])
 
-## ----hard thresholding example-------------------------------------------
+## ----hard thresholding example------------------------------------------------
 #  library(TextForecast)
 #  data("stock_data")
 #  data("optimal_factors")
@@ -102,7 +102,7 @@ knitr::opts_chunk$set(
 #  news_factor <- hard_thresholding(w=w[1:(t-1),],
 #  x=pc[1:(t-1),],y=y[2:t],p_value = 0.01,newx = pc)
 
-## ----Text Forecast Example-----------------------------------------------
+## ----Text Forecast Example----------------------------------------------------
 #  library(TextForecast)
 #  set.seed(1)
 #  data("stock_data")
@@ -114,7 +114,7 @@ knitr::opts_chunk$set(
 #  fcsts=text_forecast(z,y,1,TRUE)
 #  print(fcsts)
 
-## ----Text Nowcast Example------------------------------------------------
+## ----Text Nowcast Example-----------------------------------------------------
 #   library(TextForecast)
 #   set.seed(1)
 #   data("stock_data")
@@ -129,7 +129,7 @@ knitr::opts_chunk$set(
 #   ncsts=text_nowcast(z,y[1:(t-1)],TRUE)
 #   print(ncsts)
 
-## ----Top Terms Example---------------------------------------------------
+## ----Top Terms Example--------------------------------------------------------
 #  library(TextForecast)
 #   set.seed(1)
 #   data("stock_data")
@@ -147,7 +147,7 @@ knitr::opts_chunk$set(
 #   top_trms<- top_terms(x[1:(t-1),],w[1:(t-1),],y[2:t],optimal_alphas[[1]],
 #  optimal_alphas[[2]],10,TRUE,10,c(2,0.3),.15,"gaussian")
 
-## ----TV sentiment index example------------------------------------------
+## ----TV sentiment index example-----------------------------------------------
 #  library(TextForecast)
 #   set.seed(1)
 #   data("stock_data")
@@ -166,7 +166,7 @@ knitr::opts_chunk$set(
 #   y[2:t],optimal_alphas[[1]],optimal_alphas[[2]],x,"gaussian",2)
 #   head(tv_index)
 
-## ----TV sentiment index all coefs example--------------------------------
+## ----TV sentiment index all coefs example-------------------------------------
 #   set.seed(1)
 #   data("stock_data")
 #   data("news_data")

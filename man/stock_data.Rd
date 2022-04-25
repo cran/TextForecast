@@ -4,13 +4,15 @@
 \name{stock_data}
 \alias{stock_data}
 \title{Stock Data}
-\format{A tibble with 3 components.
+\format{
+A tibble with 3 components.
 
 \describe{
 \item{dates}{The vector of dates.}
 \item{sp_return}{The S&P 500 returns.}
 \item{vix}{The volatility index.}
-}}
+}
+}
 \usage{
 stock_data
 }

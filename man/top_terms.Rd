@@ -4,8 +4,19 @@
 \alias{top_terms}
 \title{Top Terms Function}
 \usage{
-top_terms(x, w, y, alpha, lambda, k, wordcloud, max.words, scale, rot.per,
-  family)
+top_terms(
+  x,
+  w,
+  y,
+  alpha,
+  lambda,
+  k,
+  wordcloud,
+  max.words,
+  scale,
+  rot.per,
+  family
+)
 }
 \arguments{
 \item{x}{the input matrix of terms to be selected.}

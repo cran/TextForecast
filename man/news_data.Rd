@@ -4,12 +4,14 @@
 \name{news_data}
 \alias{news_data}
 \title{News Data}
-\format{A tibble with 1631 components.
+\format{
+A tibble with 1631 components.
 
 \describe{
 \item{dates}{The vector of dates.}
 \item{X}{The terms counting.}
-}}
+}
+}
 \usage{
 news_data
 }
